@@ -396,7 +396,8 @@ margin-left: auto;
                 margin-bottom: 12px;
 }
 
-.form-box{
+.form-box{      
+                position: relative;
                 margin-bottom: 10px;
                 display: flex;
                 flex-direction: column;
@@ -412,22 +413,29 @@ margin-left: auto;
 }
 
 .form-input{
-        padding: 0;
+        display: block;
+        padding-left: 42px;
         margin: 0;
+        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
         height: 40px;
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
+        outline: none;
 }
 
 .label-checkbox{
         font-size: 14px;
         line-height: 1.71;
         margin-bottom: 30px;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
 }
 
 .link-checkbox{
         color: var(--accent-text-color);
+        margin-left: 4px;
 
 }
 
@@ -457,9 +465,112 @@ margin-left: auto;
 
 .comment-form{
         height: 120px;
-        padding: 0px;
+        padding: 12px 16px;
         
 }
+textarea{
+        display: inline-block;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+                border-radius: 4px;
+        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        resize: none;
+        outline: none;
+        
+}
+
+.comment-form:focus{
+        border-color: var(--accent-text-color);
+}
+
+.form-box label {
+        margin-bottom: 4px;
+}
+
+.name-icon{
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        fill: currentColor;
+        width: 18px;
+        height: 18px;
+}
+
+.name-icon:hover, .name-icon:focus{
+
+        color: var(--accent-text-color);
+        
+}
+
+
+.form-input:focus~.name-icon{
+       color: var(--accent-text-color);
+       
+}
+
+
+.telephone-icon{
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        fill: currentColor;
+        width: 18px;
+        height: 18px;
+}
+
+.form-input:focus~.telephone-icon {
+        color: var(--accent-text-color);
+
+}
+
+.mail-icon{
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        fill: currentColor;
+        width: 18px;
+        height: 18px;
+}
+
+.form-input:focus~.mail-icon {
+        color: var(--accent-text-color);
+
+}
+
+.checkbox-form{
+        appearance: none;
+        position: absolute;
+}
+
+.checkbox-icon{
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        display: inline-block;
+        margin-right: 7px;
+        width: 16px;
+        height: 15px;
+        border: 2px solid var(--pramary-text-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
+        background-color: var(--white-text-color);
+}
+
+.checkbox-form:checked + .checkbox-icon{
+        border-color: transparent;
+        background-color: var(--accent-text-color);
+        background-image: url(../images/icon\ check.svg);
+        background-size: contain;
+        background-origin: border-box;
+}
+
+.checkbox-icon:focus{
+   border: 3px solid var(--logo-text-color);
+}
+
 
 /* section */
 
@@ -869,6 +980,16 @@ align-content: flex-end;
         padding-left: 0;
         padding-right: 0;
         min-width: 200px;
+
+        display: inline-block;
+                padding-left: 28px;
+                padding-right: 62px;
+        
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 1.87;
+                letter-spacing: 0.06em;
+
         border:transparent;
         height: 50px;
         background: var(--accent-text-color);
@@ -878,17 +999,6 @@ align-content: flex-end;
 }
 
 
-.label-text{
-        display: inline-block;
-        padding-left: 28px;
-        padding-right: 62px;
-
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.87;
-        letter-spacing: 0.06em;
-        
-}
 .icon-subscription{
 
         position: absolute;

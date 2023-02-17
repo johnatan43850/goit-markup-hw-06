@@ -393,7 +393,7 @@
                     <label class="subscription-label">
                         <input type="email" name="підписка" placeholder="E-mail" class="subscription-emeil">
                     </label>
-                    <button type="submit" class="button-subscription"> <span class="label-text">Підписатися</span>
+                    <button type="submit" class="button-subscription">Підписатися</span>
                     <svg class="icon-subscription">
                         <use href="./images/symbol-defs.svg#icon-icon-send">
                         </use>
@@ -419,25 +419,35 @@
             <b class="modal-text">Залиште свої дані, ми вам передзвонимо</b>
 
             <form>
+
+                <label for="name" class="form-label">Ім'я</label>
                 <div class="form-box">
-                    <label for="name" class="form-label">Ім'я</label>
                     <input type="text" name="Ім'я" id="name" class="form-input">
+                    <svg class="name-icon">
+                        <use href="./images/symbol-defs.svg#icon-person-black-18dp-1"></use>
+                    </svg>
                     
                 </div>
 
+                <label for="tel" class="form-label">Телефон</label>
                 <div class="form-box">
-                    <label for="tel" class="form-label">Телефон</label>
                     <input type="text" name="" id="tel" class="form-input"> 
+                    <svg class="telephone-icon">
+                        <use href="./images/symbol-defs.svg#icon-phone-black-18dp-1"></use>
+                    </svg>
                 </div>
-
+                
+                <label for="mail" class="form-label">Пошта</label>
                 <div class="form-box">
-                    <label for="mail" class="form-label">Пошта</label>
                     <input type="text" name="" id="mail"  class="form-input">
+                    <svg class="mail-icon">
+                        <use href="./images/symbol-defs.svg#icon-email-black-18dp-1"></use>
+                    </svg>
                 </div>
 
                 <div class="form-box">
                     <label for="comment" class="form-label">Коментар</label>
-                   <textarea name="comment" id="comment"  class="comment-form"></textarea>
+                   <textarea name="comment" id="comment"  class="comment-form" placeholder="Введіть текст"></textarea>
                     
 
                 </div>
@@ -445,7 +455,11 @@
                 
 
                 <div class="form-checkbox">
-                    <label for="" class="label-checkbox"><input type="checkbox" value="" > Погоджуюся з розсилкою та приймаю <a href="" class="link-checkbox">Умови договору</a></label>
+                    <label  class="label-checkbox">
+                    <input type="checkbox" value="Умови договору" class="checkbox-form" > 
+                    <span class="checkbox-icon"></span>
+                    Погоджуюся з розсилкою та приймаю<a href="" class="link-checkbox"> Умови договору
+                     </a></label>
                     <button type="submit" class="submit-modal"> Відправити </button>
                 </div>
 

@@ -334,7 +334,7 @@ margin-left: auto;
 }
 
 
-.close-button:hover{
+.close-button:hover, .close-button:focus{
         fill: var(--accent-text-color);
 }
 

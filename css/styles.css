@@ -309,6 +309,7 @@ margin-left: auto;
         right: 0;
         width: 30px;
         height: 30px;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         display: flex;
         justify-content: center;
@@ -363,12 +364,12 @@ margin-left: auto;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding-left: 41px;
+        padding-left: 40px;
         padding-top: 40px;
-        padding-right: 39px;
+        padding-right: 40px;
+        padding-bottom: 40px;
         
         width: 528px;
-        height: 581px;
         background-color: var(--white-text-color);
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
         0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -406,10 +407,12 @@ margin-left: auto;
 }
 
 .form-label{
+        display: inline-block;
         font-size: 12px;
         line-height: 1.16;
         letter-spacing: 0.01em;
         color: var(--secondary-text-color);
+        margin-bottom: 4px;
 }
 
 .form-input{
@@ -432,6 +435,8 @@ margin-left: auto;
         justify-content: center;
         user-select: none;
 }
+
+
 
 .link-checkbox{
         color: var(--accent-text-color);
@@ -523,7 +528,9 @@ textarea{
 
 .form-input:focus~.telephone-icon {
         color: var(--accent-text-color);
-
+}
+.form-input:focus{
+        border-color: var(--accent-text-color);
 }
 
 .mail-icon{
@@ -539,11 +546,12 @@ textarea{
 
 .form-input:focus~.mail-icon {
         color: var(--accent-text-color);
-
 }
 
+
+
 .checkbox-form{
-        appearance: none;
+        appearance: none; 
         position: absolute;
 }
 
@@ -563,13 +571,16 @@ textarea{
         border-color: transparent;
         background-color: var(--accent-text-color);
         background-image: url(../images/icon\ check.svg);
+        background-repeat: no-repeat;
         background-size: contain;
         background-origin: border-box;
 }
 
-.checkbox-icon:focus{
-   border: 3px solid var(--logo-text-color);
+.checkbox-form:focus + .checkbox-icon{
+        border-color: var(--accent-text-color);
 }
+
+
 
 
 /* section */
@@ -941,7 +952,7 @@ textarea{
                 /* subscription */
 .subscription-text{
 
-                padding-bottom: 20px;
+                margin-bottom: 20px;
                 
                 font-weight: 700;
                 font-size: 14px;
